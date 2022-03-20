@@ -1,11 +1,7 @@
-import { Box, chakra, Flex, Heading, Text, VStack } from '@chakra-ui/react';
+import { Box, Flex, Heading, Text, VStack } from '@chakra-ui/react';
 import type { NextPage } from 'next';
-import Image from 'next/image';
 import { Deck } from '../components/Deck';
-
-const NextImage = chakra(Image, {
-  shouldForwardProp: (prop) => ['src', 'width', 'height'].includes(prop),
-});
+import { NextImage } from '../components/NextComponents';
 
 const Home: NextPage = () => {
   const mainColor = 'orange.400';

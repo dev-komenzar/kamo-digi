@@ -1,31 +1,158 @@
-import { chakra } from '@chakra-ui/react';
+import { CheckCircleIcon } from '@chakra-ui/icons';
+import {
+  Box,
+  chakra,
+  Heading,
+  List,
+  ListIcon,
+  ListItem,
+  Stack,
+  Text,
+} from '@chakra-ui/react';
 import { animated, to as interpolate, useSprings } from '@react-spring/web';
 import { useDrag } from '@use-gesture/react';
-import React, { useState } from 'react';
+import React, { useState, VFC } from 'react';
+
+const Houdouji: VFC = () => {
+  return (
+    <>
+      <Box
+        w="full"
+        h="300px"
+        mt={0}
+        mx={0}
+        backgroundImage="/houdouji.png"
+        borderTopRadius={'2xl'}
+        borderBottomRadius={0}
+        backgroundPosition="center"
+        backgroundSize="cover"
+      >
+        {/* <NextImage
+          src="/houdouji.png"
+          width="1719px"
+          height="1196px"
+          borderTopRadius={'2xl'}
+          borderBottomRadius={0}
+        /> */}
+      </Box>
+      <Stack>
+        <Text
+          color="blue.500"
+          fontWeight="800"
+          fontSize="xs"
+          letterSpacing="wide"
+        >
+          サイト作成
+        </Text>
+        <Heading color="gray.700" fontSize="lg" fontFamily="body">
+          日本仏教徒協会・実験寺院寳幢寺
+        </Heading>
+      </Stack>
+    </>
+  );
+};
+
+const WhatIsKamodigi: VFC = () => {
+  return (
+    <Box p={4}>
+      <Heading color="gray.700" fontSize={{ base: 'lg', md: '3xl', lg: '6xl' }}>
+        鴨川
+        <br />
+        デジタル
+        <br />
+        相談所
+      </Heading>
+      <List spacing={3}>
+        <ListItem>
+          <ListIcon as={CheckCircleIcon} color="green.500" />
+          サイト作成
+        </ListItem>
+        <ListItem>
+          <ListIcon as={CheckCircleIcon} color="green.500" />
+          Web アプリ開発
+        </ListItem>
+        <ListItem>
+          <ListIcon as={CheckCircleIcon} color="green.500" />
+          ネイティブアプリ開発
+        </ListItem>
+        <ListItem>
+          <ListIcon as={CheckCircleIcon} color="green.500" />
+          その他、デジタルなんでも！
+        </ListItem>
+      </List>
+    </Box>
+  );
+};
+
+const TechInfo: VFC = () => {
+  return (
+    <Box p={4}>
+      <Heading color="gray.700" fontSize={{ base: 'lg', md: '3xl', lg: '6xl' }}>
+        あつかう分野
+      </Heading>
+      <List spacing={3}>
+        <ListItem>
+          <ListIcon as={CheckCircleIcon} color="green.500" />
+          React, Next.js, Svelteを用いたWebアプリ開発
+        </ListItem>
+        <ListItem>
+          <ListIcon as={CheckCircleIcon} color="green.500" />
+          アニメーションも得意
+        </ListItem>
+        <ListItem>
+          <ListIcon as={CheckCircleIcon} color="green.500" />
+          React Native ネイティブアプリ開発
+        </ListItem>
+        <ListItem>
+          <ListIcon as={CheckCircleIcon} color="green.500" />
+          Electron を用いたデスクトップアプリ開発
+        </ListItem>
+        <ListItem>
+          <ListIcon as={CheckCircleIcon} color="green.500" />
+          WordPress 補修、移行
+        </ListItem>
+        <ListItem>
+          <ListIcon as={CheckCircleIcon} color="green.500" />
+          Notion など業務効率化のご提案
+        </ListItem>
+        <ListItem>
+          <ListIcon as={CheckCircleIcon} color="green.500" />
+          Electron を用いたデスクトップアプリ開発
+        </ListItem>
+      </List>
+    </Box>
+  );
+};
+
+const GarageSale: VFC = () => {
+  return (
+    <Box p={4}>
+      <Heading color="gray.700" fontSize={{ base: 'lg', md: '3xl', lg: '6xl' }}>
+        ガレージセール
+      </Heading>
+      <Stack>
+        <Text>開発中のサービス。</Text>
+      </Stack>
+    </Box>
+  );
+};
 
 const AnimatedBox = chakra(animated.div);
 
-const cards = [
-  'https://upload.wikimedia.org/wikipedia/en/f/f5/RWS_Tarot_08_Strength.jpg',
-  'https://upload.wikimedia.org/wikipedia/en/5/53/RWS_Tarot_16_Tower.jpg',
-  'https://upload.wikimedia.org/wikipedia/en/9/9b/RWS_Tarot_07_Chariot.jpg',
-  'https://upload.wikimedia.org/wikipedia/en/d/db/RWS_Tarot_06_Lovers.jpg',
-  'https://upload.wikimedia.org/wikipedia/en/thumb/8/88/RWS_Tarot_02_High_Priestess.jpg/690px-RWS_Tarot_02_High_Priestess.jpg',
-  'https://upload.wikimedia.org/wikipedia/en/d/de/RWS_Tarot_01_Magician.jpg',
-];
+const cards = [<GarageSale />, <Houdouji />, <TechInfo />, <WhatIsKamodigi />];
 
 // These two are just helpers, they curate spring data, values that are later being interpolated into css
 const to = (i: number) => ({
   x: 0,
   y: i * -4,
   scale: 1,
-  rot: -10 + Math.random() * 20,
+  rot: -10 + Math.random() * 30,
   delay: i * 100,
 });
 const from = (_i: number) => ({ x: 0, rot: 0, scale: 1.5, y: -1000 });
 // This is being used down there in the view, it interpolates rotation and scale into a css transform
 const trans = (r: number, s: number) =>
-  `perspective(1000px) rotateX(30deg) rotateY(${
+  `perspective(1000px) rotateX(8deg) rotateY(${
     r / 10
   }deg) rotateZ(${r}deg) scale(${s})`;
 
@@ -84,21 +211,20 @@ export function Deck() {
             backgroundRepeat="no-repeat"
             backgroundPosition="center center"
             w="45vh"
-            maxW="300px"
+            maxW="360px"
             h="85vh"
             maxH="570px"
             willChange="transform"
             borderRadius="3xl"
             boxShadow="2xl"
+            overflow="hidden"
+            userSelect="none"
             {...bind(i)}
             style={{
               transform: interpolate([rot, scale], trans),
-              backgroundImage: `url(${cards[i]})`,
-              padding: '4px',
             }}
           >
-            <h1>Sample Card</h1>
-            Hello world!
+            {cards[i]}
           </AnimatedBox>
         </AnimatedBox>
       ))}
