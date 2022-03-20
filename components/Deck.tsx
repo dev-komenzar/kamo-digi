@@ -1,4 +1,4 @@
-import { CheckCircleIcon } from '@chakra-ui/icons';
+import { CheckCircleIcon, InfoIcon } from '@chakra-ui/icons';
 import {
   Box,
   chakra,
@@ -12,6 +12,7 @@ import {
 import { animated, to as interpolate, useSprings } from '@react-spring/web';
 import { useDrag } from '@use-gesture/react';
 import React, { useState, VFC } from 'react';
+import { Spacer } from '../components/Spacer';
 
 const Houdouji: VFC = () => {
   return (
@@ -26,16 +27,9 @@ const Houdouji: VFC = () => {
         borderBottomRadius={0}
         backgroundPosition="center"
         backgroundSize="cover"
-      >
-        {/* <NextImage
-          src="/houdouji.png"
-          width="1719px"
-          height="1196px"
-          borderTopRadius={'2xl'}
-          borderBottomRadius={0}
-        /> */}
-      </Box>
-      <Stack>
+      ></Box>
+      <Spacer height={4} />
+      <Stack p={4}>
         <Text
           color="blue.500"
           fontWeight="800"
@@ -44,9 +38,16 @@ const Houdouji: VFC = () => {
         >
           サイト作成
         </Text>
+        <Spacer height={2} />
         <Heading color="gray.700" fontSize="lg" fontFamily="body">
-          日本仏教徒協会・実験寺院寳幢寺
+          実験寺院・寳幢寺
+          <Text as={'span'} fontSize="sm">
+            （ホウドウジ）
+          </Text>
         </Heading>
+        <Text color="gray.500">
+          日本仏教徒協会様が運営する新しいあり方を模索するお寺、ホウドウジ。サイトを作成させていただきました。
+        </Text>
       </Stack>
     </>
   );
@@ -62,7 +63,12 @@ const WhatIsKamodigi: VFC = () => {
         <br />
         相談所
       </Heading>
+      <Spacer height={4} />
       <List spacing={3}>
+        <ListItem>
+          <ListIcon as={InfoIcon} color="green.500" />
+          京都を中心に活動
+        </ListItem>
         <ListItem>
           <ListIcon as={CheckCircleIcon} color="green.500" />
           サイト作成
@@ -77,7 +83,15 @@ const WhatIsKamodigi: VFC = () => {
         </ListItem>
         <ListItem>
           <ListIcon as={CheckCircleIcon} color="green.500" />
-          その他、デジタルなんでも！
+          ネット広告・SEO・MEO
+        </ListItem>
+        <ListItem>
+          <ListIcon as={CheckCircleIcon} color="green.500" />
+          ライブ配信のお手伝い
+        </ListItem>
+        <ListItem>
+          <ListIcon as={CheckCircleIcon} color="green.500" />
+          幅広く相談お受けします
         </ListItem>
       </List>
     </Box>
@@ -90,6 +104,7 @@ const TechInfo: VFC = () => {
       <Heading color="gray.700" fontSize={{ base: 'lg', md: '3xl', lg: '6xl' }}>
         あつかう分野
       </Heading>
+      <Spacer height={4} />
       <List spacing={3}>
         <ListItem>
           <ListIcon as={CheckCircleIcon} color="green.500" />
@@ -97,11 +112,15 @@ const TechInfo: VFC = () => {
         </ListItem>
         <ListItem>
           <ListIcon as={CheckCircleIcon} color="green.500" />
+          TypeScript で型安全な開発
+        </ListItem>
+        <ListItem>
+          <ListIcon as={CheckCircleIcon} color="green.500" />
           アニメーションも得意
         </ListItem>
         <ListItem>
           <ListIcon as={CheckCircleIcon} color="green.500" />
-          React Native ネイティブアプリ開発
+          React Native, Expo ネイティブアプリ開発
         </ListItem>
         <ListItem>
           <ListIcon as={CheckCircleIcon} color="green.500" />
@@ -119,6 +138,10 @@ const TechInfo: VFC = () => {
           <ListIcon as={CheckCircleIcon} color="green.500" />
           Electron を用いたデスクトップアプリ開発
         </ListItem>
+        <ListItem>
+          <ListIcon as={CheckCircleIcon} color="green.500" />
+          Go, Elm, Raspberry Pi...
+        </ListItem>
       </List>
     </Box>
   );
@@ -130,8 +153,12 @@ const GarageSale: VFC = () => {
       <Heading color="gray.700" fontSize={{ base: 'lg', md: '3xl', lg: '6xl' }}>
         ガレージセール
       </Heading>
+      <Spacer height={4} />
       <Stack>
-        <Text>開発中のサービス。</Text>
+        <Text color={'gray.500'}>
+          開発中のサービス。個人が直接マーケットに結び付けられる時代に、コミュニティの中の信頼をベースとするサービスを作っていきます。
+          開発者・モニター募集中。
+        </Text>
       </Stack>
     </Box>
   );
@@ -217,6 +244,8 @@ export function Deck() {
             willChange="transform"
             borderRadius="3xl"
             boxShadow="2xl"
+            borderWidth={1}
+            borderColor="gray.200"
             overflow="hidden"
             userSelect="none"
             {...bind(i)}
