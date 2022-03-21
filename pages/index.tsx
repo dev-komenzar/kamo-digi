@@ -35,6 +35,7 @@ const Home: NextPage = () => {
           letterSpacing="wider"
           color="gray.600"
           textAlign="left"
+          fontFamily={'heading'}
         >
           鴨川デジタル相談所
         </Heading>
@@ -45,6 +46,7 @@ const Home: NextPage = () => {
         backgroundPosition="center"
         backgroundSize="cover"
         justify={'center'}
+        fontFamily="body"
       >
         <VStack
           spacing={{ base: 8, md: 10 }}
@@ -58,6 +60,7 @@ const Home: NextPage = () => {
             fontWeight={600}
             letterSpacing="wide"
             fontSize={{ base: '3xl', sm: '4xl', md: '6xl' }}
+            fontFamily="heading"
           >
             仲間と生きるための
             <br />
@@ -65,14 +68,24 @@ const Home: NextPage = () => {
               テック
             </Text>
           </Heading>
-          <Text color="gray.500" maxW={{ base: 'lg', lg: '2xl' }}>
-            もう一度社会を作りなおすためには、
-            まず身近な友だちや仲間とともに生きる意識をもつことが重要です。
-            <br />
-            グローバルに広がるマーケットから
-            分離されたローカルな輪を重層的に作っていく。
-            鴨川デジタル相談所はそのためのテックを提案します。
-          </Text>
+          <VStack
+            color="gray.600"
+            maxW={{ base: 'lg', lg: '2xl' }}
+            lineHeight="taller"
+          >
+            <Text>
+              もう一度社会を作りなおすためには、
+              まず身近な友だちや仲間とともに生きる意識をもつことが重要です。
+            </Text>
+            <Text>
+              グローバルに広がるマーケットから
+              分離されたローカルな輪を重層的に作っていく。
+              鴨川デジタル相談所はそのためのテックを提案します。
+            </Text>
+            <Text>
+              そんなことを思いつつ、ITやWebの何でも屋をやっています。なにか困ったら、アイデアがあれば、ぜひご相談ください。
+            </Text>
+          </VStack>
           <Box
             id="photo-card"
             w={{ base: '90vw', md: '80vw', lg: '60vw' }}
@@ -93,7 +106,13 @@ const Home: NextPage = () => {
         </VStack>
       </Flex>
       <Center h={4} mt={4}>
-        <Heading as={'h2'} fontWeight={500} color="gray.500" fontSize="lg">
+        <Heading
+          as={'h2'}
+          fontWeight={500}
+          color="gray.500"
+          fontSize="lg"
+          fontFamily={'heading'}
+        >
           鴨川デジタル相談所がやっていること、お仕事など
         </Heading>
       </Center>
@@ -105,14 +124,21 @@ const Home: NextPage = () => {
         overflowX={'hidden'}
         overflowY="visible"
         pos={'absolute'}
+        fontFamily="body"
       >
         <Deck />
       </Flex>
       <Spacer height="90vh" bgColor="white" />
       <Spacer height={24} />
-      <VStack w="full" justify="center" alignItems={'center'}>
+      <VStack
+        w="full"
+        justify="center"
+        alignItems={'center'}
+        fontFamily="body"
+        spacing={4}
+      >
         <Avatar size="2xl" src="/avator-640.jpeg" name="Takuya Kometani" />
-        <Heading fontSize="3xl" color={'gray.700'}>
+        <Heading fontSize="3xl" color={'gray.700'} fontFamily="heading">
           こめたに・たくや
         </Heading>
         <Link
@@ -130,37 +156,39 @@ const Home: NextPage = () => {
         >
           kamo.digi@icloud.com
         </Link>
-        <Text color={'gray.600'} maxW={{ base: 'xs', md: 'sm', lg: 'md' }}>
-          フリーランスエンジニアであり自転車旅人。鴨川デジタル相談所という屋号で京都を中心に活動する。
-        </Text>
-        <Text color={'gray.600'} maxW={{ base: 'xs', md: 'sm', lg: 'md' }}>
-          熊野寮での学生生活を経て「ともに生きる空間」を作ることに興味がある。
-          一緒に作っていきましょう。
-        </Text>
-        <Text color={'gray.600'} maxW={{ base: 'xs', md: 'sm', lg: 'md' }}>
-          物を見つけたり、捨てられたものを活用する能力が高い。ヒンディー語でいうजुगाड़
-          (jugaad) の精神に富んでいる。
-        </Text>
-        <Text color={'gray.600'} maxW={{ base: 'xs', md: 'sm', lg: 'md' }}>
-          世界１２か国を自転車で旅をした。次の目標はユーラシア大陸横断。
-          愛車はチクリ・カツオのツアラー。
-        </Text>
-        <Box
-          borderRadius="2xl"
-          boxShadow="2xl"
-          w="40vw"
-          maxWidth={'400px'}
-          h="30vh"
-          maxH={'280px'}
-          overflow="hidden"
-        >
-          <NextImage
-            src={'/my-katsuo.jpeg'}
-            alt="チクリ・カツオ"
-            width={'640px'}
-            height={'480px'}
-          />
-        </Box>
+        <VStack spacing={3} lineHeight="taller">
+          <Text color={'gray.600'} maxW={{ base: 'xs', md: 'sm', lg: 'md' }}>
+            フリーランスエンジニアであり自転車旅人。鴨川デジタル相談所という屋号で京都を中心に活動する。
+          </Text>
+          <Text color={'gray.600'} maxW={{ base: 'xs', md: 'sm', lg: 'md' }}>
+            熊野寮での学生生活を経て「ともに生きる空間」を作ることに興味がある。
+            一緒に作っていきましょう。
+          </Text>
+          <Text color={'gray.600'} maxW={{ base: 'xs', md: 'sm', lg: 'md' }}>
+            物を見つけたり、捨てられたものを活用する能力が高い。ヒンディー語でいうजुगाड़
+            (jugaad) の精神に富んでいる。
+          </Text>
+          <Text color={'gray.600'} maxW={{ base: 'xs', md: 'sm', lg: 'md' }}>
+            世界１２か国を自転車で旅をした。次の目標はユーラシア大陸横断。
+            愛車はチクリ・カツオのツアラー。
+          </Text>
+          <Box
+            borderRadius="2xl"
+            boxShadow="2xl"
+            w="40vw"
+            maxWidth={'400px'}
+            h="30vh"
+            maxH={'280px'}
+            overflow="hidden"
+          >
+            <NextImage
+              src={'/my-katsuo.jpeg'}
+              alt="チクリ・カツオ"
+              width={'640px'}
+              height={'480px'}
+            />
+          </Box>
+        </VStack>
       </VStack>
       <Spacer height={24} />
       <Box>
@@ -180,6 +208,7 @@ const Home: NextPage = () => {
             letterSpacing="wider"
             color="gray.600"
             textAlign="left"
+            fontFamily={'heading'}
           >
             鴨川デジタル相談所
           </Heading>
