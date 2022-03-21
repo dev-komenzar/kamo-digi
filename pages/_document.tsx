@@ -1,4 +1,5 @@
 import Document, { Head, Html, Main, NextScript } from 'next/document';
+import Script from 'next/script';
 import React, { VFC } from 'react';
 
 export default class MyDocument extends Document {
@@ -34,7 +35,7 @@ export default class MyDocument extends Document {
 
 const FontProd: VFC = () => {
   return (
-    <script src="https://webfont.fontplus.jp/accessor/script/fontplus.js?hQIULW9VvKs%3D&box=eAXUhX4aEKE%3D"></script>
+    <Script src="https://webfont.fontplus.jp/accessor/script/fontplus.js?hQIULW9VvKs%3D&box=eAXUhX4aEKE%3D"></Script>
   );
 };
 const FontDev: VFC = () => {
