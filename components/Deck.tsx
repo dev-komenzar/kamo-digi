@@ -28,7 +28,6 @@ const Houdouji: VFC = () => {
         backgroundPosition="center"
         backgroundSize="cover"
       ></Box>
-      <Spacer height={4} />
       <Stack p={4}>
         <Text
           color="blue.500"
@@ -39,7 +38,7 @@ const Houdouji: VFC = () => {
           サイト作成
         </Text>
         <Spacer height={2} />
-        <Heading color="gray.700" fontSize="lg" fontFamily="body">
+        <Heading color="gray.700" fontSize={{ base: 'lg' }}>
           実験寺院・寳幢寺
           <Text as={'span'} fontSize="sm">
             （ホウドウジ）
@@ -102,7 +101,7 @@ const TechInfo: VFC = () => {
   return (
     <Box p={4}>
       <Heading color="gray.700" fontSize={{ base: 'lg', md: '3xl', lg: '6xl' }}>
-        あつかう分野
+        あつかう技術
       </Heading>
       <Spacer height={4} />
       <List spacing={3}>
@@ -244,8 +243,8 @@ export function Deck() {
             backgroundPosition="center center"
             w="45vh"
             maxW="360px"
-            h="85vh"
-            maxH="570px"
+            h="75vh"
+            maxH="520px"
             willChange="transform"
             borderRadius="3xl"
             boxShadow="2xl"
