@@ -1,5 +1,4 @@
 import Document, { Head, Html, Main, NextScript } from 'next/document';
-import Script from 'next/script';
 import React, { VFC } from 'react';
 
 export default class MyDocument extends Document {
@@ -20,7 +19,8 @@ export default class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;600&display=swap"
             rel="stylesheet"
           ></link>
-          {process.env.NODE_ENV === 'production' ? <FontProd /> : <FontDev />}
+          {process.env.NODE_ENV === 'production' ? null : <FontDev />}
+          {/* <script src="https://webfont.fontplus.jp/accessor/script/fontplus.js?hQIULW9VvKs%3D&box=eAXUhX4aEKE%3D"></script> */}
         </Head>
         <body>
           <Main />
@@ -33,11 +33,11 @@ export default class MyDocument extends Document {
   }
 }
 
-const FontProd: VFC = () => {
-  return (
-    <Script src="https://webfont.fontplus.jp/accessor/script/fontplus.js?hQIULW9VvKs%3D&box=eAXUhX4aEKE%3D"></Script>
-  );
-};
+// const FontProd: VFC = () => {
+//   return (
+//     <script src="https://webfont.fontplus.jp/accessor/script/fontplus.js?hQIULW9VvKs%3D&box=eAXUhX4aEKE%3D"></script>
+//   );
+// };
 const FontDev: VFC = () => {
   return (
     <link
