@@ -166,7 +166,12 @@ const GarageSale: VFC = () => {
 
 const AnimatedBox = chakra(animated.div);
 
-const cards = [<GarageSale />, <Houdouji />, <TechInfo />, <WhatIsKamodigi />];
+const cards = [
+  <GarageSale key={0} />,
+  <Houdouji key={1} />,
+  <TechInfo key={2} />,
+  <WhatIsKamodigi key={3} />,
+];
 
 // These two are just helpers, they curate spring data, values that are later being interpolated into css
 const to = (i: number) => ({
