@@ -175,10 +175,8 @@ const Home: NextPage = () => {
           <Box
             borderRadius="2xl"
             boxShadow="2xl"
-            w="40vw"
-            maxWidth={'400px'}
-            h="30vh"
-            maxH={'280px'}
+            w={{ base: '300px', md: '340px', lg: '400px' }}
+            h={{ base: '200px', md: '225px', lg: '265px' }}
             overflow="hidden"
           >
             <NextImage
