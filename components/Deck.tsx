@@ -28,7 +28,7 @@ const Houdouji: VFC = () => {
         backgroundPosition="center"
         backgroundSize="cover"
       ></Box>
-      <Stack p={4}>
+      <Stack p={{ base: 2, md: 4 }}>
         <Text
           color="blue.500"
           fontWeight="800"
@@ -37,7 +37,6 @@ const Houdouji: VFC = () => {
         >
           サイト作成
         </Text>
-        <Spacer height={2} />
         <Heading color="gray.700" fontSize={{ base: 'lg' }}>
           実験寺院・寳幢寺
           <Text as={'span'} fontSize="sm">
@@ -63,7 +62,7 @@ const WhatIsKamodigi: VFC = () => {
         相談所
       </Heading>
       <Spacer height={4} />
-      <List spacing={3}>
+      <List spacing={3} color="gray.600">
         <ListItem>
           <ListIcon as={InfoIcon} color="green.500" />
           京都を中心に活動
@@ -104,7 +103,7 @@ const TechInfo: VFC = () => {
         あつかう技術
       </Heading>
       <Spacer height={4} />
-      <List spacing={3}>
+      <List spacing={3} color="gray.600">
         <ListItem>
           <ListIcon as={CheckCircleIcon} color="green.500" />
           React, Next.js, Svelteを用いたWebアプリ開発
@@ -125,6 +124,14 @@ const TechInfo: VFC = () => {
           <ListIcon as={CheckCircleIcon} color="green.500" />
           Electron を用いたデスクトップアプリ開発
         </ListItem>
+      </List>
+    </Box>
+  );
+};
+const TechInfoPage2: VFC = () => {
+  return (
+    <Box p={4}>
+      <List spacing={3} color="gray.600">
         <ListItem>
           <ListIcon as={CheckCircleIcon} color="green.500" />
           WordPress 補修、移行
@@ -168,6 +175,7 @@ const AnimatedBox = chakra(animated.div);
 const cards = [
   <GarageSale key="garage-sale" />,
   <Houdouji key="houdouji" />,
+  <TechInfoPage2 key="my-tech-page2" />,
   <TechInfo key="my-tech" />,
   <WhatIsKamodigi key="my-profile" />,
 ];
@@ -241,10 +249,8 @@ export function Deck() {
             backgroundSize="auto 85%"
             backgroundRepeat="no-repeat"
             backgroundPosition="center center"
-            w="45vh"
-            maxW="360px"
-            h="75vh"
-            maxH="520px"
+            w={{ base: '280px', md: '400px' }}
+            h={{ base: '480px', md: '520px', lg: '570px' }}
             willChange="transform"
             borderRadius="3xl"
             boxShadow="2xl"

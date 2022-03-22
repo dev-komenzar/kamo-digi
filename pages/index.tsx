@@ -105,16 +105,20 @@ const Home: NextPage = () => {
           </Box>
         </VStack>
       </Flex>
-      <Center h={4} mt={4}>
+      <Center mt={4} flexDirection="column">
         <Heading
           as={'h2'}
           fontWeight={500}
-          color="gray.500"
+          color="gray.700"
           fontSize="lg"
           fontFamily={'heading'}
         >
-          鴨川デジタル相談所がやっていること、お仕事など
+          鴨川デジタル相談所がやっていること
         </Heading>
+        <Spacer height={2} />
+        <Text fontSize="sm" color={'gray.600'}>
+          左右にスワイプ
+        </Text>
       </Center>
       <Flex
         w="100vw"
