@@ -1,8 +1,9 @@
-import { CheckCircleIcon, InfoIcon } from '@chakra-ui/icons';
+import { CheckCircleIcon, ExternalLinkIcon, InfoIcon } from '@chakra-ui/icons';
 import {
   Box,
   chakra,
   Heading,
+  Link,
   List,
   ListIcon,
   ListItem,
@@ -17,17 +18,28 @@ import { Spacer } from '../components/Spacer';
 const Houdouji: VFC = () => {
   return (
     <>
-      <Box
-        w="full"
-        h="300px"
-        mt={0}
-        mx={0}
-        backgroundImage="/houdouji.png"
-        borderTopRadius={'2xl'}
-        borderBottomRadius={0}
-        backgroundPosition="center"
-        backgroundSize="cover"
-      ></Box>
+      <Link href="https://www.samgha.org" isExternal>
+        <Box
+          w="full"
+          h="300px"
+          mt={0}
+          mx={0}
+          backgroundImage="/houdouji.png"
+          borderTopRadius={'2xl'}
+          borderBottomRadius={0}
+          backgroundPosition="center"
+          backgroundSize="cover"
+          pos={'relative'}
+        >
+          <ExternalLinkIcon
+            pos={'absolute'}
+            bottom={2}
+            right={2}
+            boxSize={8}
+            color="white"
+          />
+        </Box>
+      </Link>
       <Stack p={{ base: 2, md: 4 }}>
         <Text
           color="blue.500"
@@ -35,7 +47,7 @@ const Houdouji: VFC = () => {
           fontSize="xs"
           letterSpacing="wide"
         >
-          サイト作成
+          サイト作成　実績
         </Text>
         <Heading color="gray.700" fontSize={{ base: 'lg' }}>
           実験寺院・寳幢寺
