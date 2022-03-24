@@ -25,14 +25,14 @@ const Houdouji: VFC = () => {
           mt={0}
           mx={0}
           backgroundImage="/houdouji.png"
-          borderTopRadius={'2xl'}
+          borderTopRadius="2xl"
           borderBottomRadius={0}
           backgroundPosition="center"
           backgroundSize="cover"
-          pos={'relative'}
+          pos="relative"
         >
           <ExternalLinkIcon
-            pos={'absolute'}
+            pos="absolute"
             bottom={2}
             right={2}
             boxSize={8}
@@ -51,7 +51,7 @@ const Houdouji: VFC = () => {
         </Text>
         <Heading color="gray.700" fontSize={{ base: 'lg' }}>
           実験寺院・寳幢寺
-          <Text as={'span'} fontSize="sm">
+          <Text as="span" fontSize="sm">
             （ホウドウジ）
           </Text>
         </Heading>
@@ -173,7 +173,7 @@ const GarageSale: VFC = () => {
       </Heading>
       <Spacer height={4} />
       <Stack>
-        <Text color={'gray.500'}>
+        <Text color="gray.500">
           開発中のサービス。個人が直接マーケットに結び付けられる時代に、コミュニティの中の信頼をベースとするサービスを作っていきます。
           開発者・モニター募集中。
         </Text>
@@ -245,10 +245,10 @@ export function Deck() {
     <>
       {props.map(({ x, y, rot, scale }, i) => (
         <AnimatedBox
-          position={'absolute'}
+          position="absolute"
           w="300px"
           h="200px"
-          willChange={'transform'}
+          willChange="transform"
           display="flex"
           alignItems="center"
           justifyContent="center"

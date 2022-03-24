@@ -35,7 +35,7 @@ const Home: NextPage = () => {
           letterSpacing="wider"
           color="gray.600"
           textAlign="left"
-          fontFamily={'heading'}
+          fontFamily="heading"
         >
           鴨川デジタル相談所
         </Heading>
@@ -45,7 +45,7 @@ const Home: NextPage = () => {
         backgroundImage="/mesh-gradient.png"
         backgroundPosition="center"
         backgroundSize="cover"
-        justify={'center'}
+        justify="center"
         fontFamily="body"
       >
         <VStack
@@ -64,7 +64,7 @@ const Home: NextPage = () => {
           >
             仲間と生きるための
             <br />
-            <Text as={'span'} color={mainColor}>
+            <Text as="span" color={mainColor}>
               テック
             </Text>
           </Heading>
@@ -91,43 +91,43 @@ const Home: NextPage = () => {
             w={{ base: '90vw', md: '80vw', lg: '60vw' }}
             h={{ base: '60vw', md: '50vw', lg: '40vw' }}
             bgColor="white"
-            boxShadow={'2xl'}
+            boxShadow="2xl"
             rounded="xl"
             p="0"
-            overflow={'hidden'}
+            overflow="hidden"
           >
             <NextImage
               src="/kamogawa.jpg"
               width="1280px"
               height="854px"
-              objectFit={'cover'}
+              objectFit="cover"
             />
           </Box>
         </VStack>
       </Flex>
       <Center mt={4} flexDirection="column">
         <Heading
-          as={'h2'}
+          as="h2"
           fontWeight={500}
           color="gray.700"
           fontSize="lg"
-          fontFamily={'heading'}
+          fontFamily="heading"
         >
           鴨川デジタル相談所がやっていること
         </Heading>
         <Spacer height={2} />
-        <Text fontSize="sm" color={'gray.600'}>
+        <Text fontSize="sm" color="gray.600">
           左右にスワイプ
         </Text>
       </Center>
       <Flex
         w="100vw"
         h="90vh"
-        justify={'center'}
+        justify="center"
         alignItems="center"
-        overflowX={'hidden'}
+        overflowX="hidden"
         overflowY="visible"
-        pos={'absolute'}
+        pos="absolute"
         fontFamily="body"
       >
         <Deck />
@@ -137,12 +137,12 @@ const Home: NextPage = () => {
       <VStack
         w="full"
         justify="center"
-        alignItems={'center'}
+        alignItems="center"
         fontFamily="body"
         spacing={4}
       >
         <Avatar size="2xl" src="/avator-640.jpeg" name="Takuya Kometani" />
-        <Heading fontSize="3xl" color={'gray.700'} fontFamily="heading">
+        <Heading fontSize="3xl" color="gray.700" fontFamily="heading">
           こめたに・たくや
         </Heading>
         <Link
@@ -151,7 +151,7 @@ const Home: NextPage = () => {
           color={mainColor}
           isExternal
         >
-          @t_komenzar (instagram) <ExternalLinkIcon mx={2} />{' '}
+          @t_komenzar (instagram) <ExternalLinkIcon mx={2} />
         </Link>
         <Link
           href="mailto:kamo.digi@icloud.com"
@@ -161,18 +161,18 @@ const Home: NextPage = () => {
           kamo.digi@icloud.com
         </Link>
         <VStack spacing={3} lineHeight="taller">
-          <Text color={'gray.600'} maxW={{ base: 'xs', md: 'sm', lg: 'md' }}>
+          <Text color="gray.600" maxW={{ base: 'xs', md: 'sm', lg: 'md' }}>
             フリーランスエンジニアであり自転車旅人。鴨川デジタル相談所という屋号で京都を中心に活動する。
           </Text>
-          <Text color={'gray.600'} maxW={{ base: 'xs', md: 'sm', lg: 'md' }}>
+          <Text color="gray.600" maxW={{ base: 'xs', md: 'sm', lg: 'md' }}>
             熊野寮での学生生活を経て「ともに生きる空間」を作ることに興味がある。
             一緒に作っていきましょう。
           </Text>
-          <Text color={'gray.600'} maxW={{ base: 'xs', md: 'sm', lg: 'md' }}>
+          <Text color="gray.600" maxW={{ base: 'xs', md: 'sm', lg: 'md' }}>
             物を見つけたり、捨てられたものを活用する能力が高い。ヒンディー語でいうजुगाड़
             (jugaad) の精神に富んでいる。
           </Text>
-          <Text color={'gray.600'} maxW={{ base: 'xs', md: 'sm', lg: 'md' }}>
+          <Text color="gray.600" maxW={{ base: 'xs', md: 'sm', lg: 'md' }}>
             世界１２か国を自転車で旅をした。次の目標はユーラシア大陸横断。
             愛車はチクリ・カツオのツアラー。
           </Text>
@@ -184,10 +184,10 @@ const Home: NextPage = () => {
             overflow="hidden"
           >
             <NextImage
-              src={'/my-katsuo.jpeg'}
+              src="/my-katsuo.jpeg"
               alt="チクリ・カツオ"
-              width={'640px'}
-              height={'480px'}
+              width="640px"
+              height="480px"
             />
           </Box>
         </VStack>
@@ -210,7 +210,7 @@ const Home: NextPage = () => {
             letterSpacing="wider"
             color="gray.600"
             textAlign="left"
-            fontFamily={'heading'}
+            fontFamily="heading"
           >
             鴨川デジタル相談所
           </Heading>
