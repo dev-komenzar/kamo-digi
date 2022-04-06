@@ -158,7 +158,7 @@ const Home: NextPage = () => {
           fontWeight={600}
           color={mainColor}
         >
-          kamo.digi@icloud.com
+          takuya.kometan@gmail.com
         </Link>
         <VStack spacing={3} lineHeight="taller">
           <Text color="gray.600" maxW={{ base: 'xs', md: 'sm', lg: 'md' }}>
