@@ -154,7 +154,7 @@ const Home: NextPage = () => {
           @t_komenzar (instagram) <ExternalLinkIcon mx={2} />
         </Link>
         <Link
-          href="mailto:kamo.digi@icloud.com"
+          href="mailto:takuya.kometan@gmail.com"
           fontWeight={600}
           color={mainColor}
         >
