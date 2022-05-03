@@ -27,8 +27,16 @@ const Home: NextPage = () => {
     setYear(thisYear);
   }, []);
   return (
-    <>
-      <Box id="header" w="full" h="auto" px={3} py={2} bgColor="white">
+    <Box as="article" mx={0}>
+      <Box
+        as="header"
+        id="header"
+        w="full"
+        h="auto"
+        px={3}
+        py={2}
+        bgColor="white"
+      >
         <Heading
           as="h1"
           fontSize={{ base: 'md', md: 'lg', lg: 'xl' }}
@@ -41,6 +49,7 @@ const Home: NextPage = () => {
         </Heading>
       </Box>
       <Flex
+        as="section"
         w="full"
         backgroundImage="/mesh-gradient.png"
         backgroundPosition="center"
@@ -105,7 +114,7 @@ const Home: NextPage = () => {
           </Box>
         </VStack>
       </Flex>
-      <Center mt={4} flexDirection="column">
+      <Center as="section" mt={4} flexDirection="column">
         <Heading
           as="h2"
           fontWeight={500}
@@ -135,6 +144,7 @@ const Home: NextPage = () => {
       <Spacer height="90vh" bgColor="white" />
       <Spacer height={24} />
       <VStack
+        as="section"
         w="full"
         justify="center"
         alignItems="center"
@@ -193,7 +203,7 @@ const Home: NextPage = () => {
         </VStack>
       </VStack>
       <Spacer height={24} />
-      <Box>
+      <Box as="footer">
         <Container
           as={Stack}
           maxW="6xl"
@@ -219,7 +229,7 @@ const Home: NextPage = () => {
           </Text>
         </Container>
       </Box>
-    </>
+    </Box>
   );
 };
 
