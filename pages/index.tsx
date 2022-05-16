@@ -94,6 +94,7 @@ const Home: NextPage = () => {
             <Text>
               そんなことを思いつつ、ITやWebの何でも屋をやっています。なにか困ったら、アイデアがあれば、ぜひご相談ください。
             </Text>
+            <Text>テスト</Text>
           </VStack>
           <Box
             id="photo-card"
